@@ -8,22 +8,29 @@ namespace TicTacToeGame
 {
     class TicTacToe
     {
-        public static void TikTakToe_Game()
-        {
-            char[] startarr = new char[10];
-            for (int i = 0;i<startarr.Length;i++)
-            {
-                if(i==0)
-                {
-                    continue;
-                }
-                startarr[i] = ' ';
 
+        public char[] board;
+        public enum Player { USER, COMPUTER };
+
+
+        // Initializes a new instance 
+
+        public TicTacToe()
+        {
+            board = new char[10];
+        }
+
+        // UC1
+        // Creates the board.
+
+        public void CreateBoard()
+        {
+            for (int position = 1; position < 10; position++)
+            {
+                board[position] = ' ';
             }
-            Console.WriteLine("\t|\t|*");
-            Console.WriteLine("------------------------");
-            Console.WriteLine("\t|\t|*");
-            Console.WriteLine("------------------------");
-            Console.WriteLine("\t|\t|*");
+        }
+
+
     }
 }
